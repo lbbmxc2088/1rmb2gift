@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 商品列表 item -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/common_devideline_dd"
+    android:padding="0.5px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- 商品图片-->
+        <ImageView
+            android:id="@+id/iv_goods"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <!-- 商品名称-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="------"
+            android:textColor="@color/theme_text_black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal">
+                    <!-- 价值 不显示-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总需："
+                        android:textColor="@color/theme_text_black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_prize"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/theme_text_black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/progress_schedule"
+                        android:textColor="@color/theme_text_black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="80%"
+                        android:textColor="@color/theme_text_black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+                <!-- 商品状态-->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_shop_progress_bg"
+                    android:layout_marginTop="1dp"
+                    android:padding="@dimen/line_size">
+
+                    <ProgressBar
+                        android:id="@+id/progress_shop_statis"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:background="@drawable/shape_shop_progress_bg"
+                        android:max="100"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/shape_progressbar_goods" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/tv_add_shopcart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:src="@mipmap/icon_homemenu_redcar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

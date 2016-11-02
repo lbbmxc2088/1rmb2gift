@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--常用色值-->
+    <color name="common_bg_gray">#f0f2f5</color> //页面背景色 浅灰
+    <color name="trans">#00000000</color>
+    <color name="half_trans">#55000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="main_red">#df3031</color>
+    <color name="theme_text_gray">#666666</color> //个别浅灰色文字（灰色背景上的文字）
+    <color name="theme_text_black">#333333</color> //偏黑色主文字
+    <color name="common_devideline_dd">#dddddd</color>//分隔线
+    <color name="common_devideline_bb">#bbbbbb</color>//灰色描边、底部固定栏分割线
+    <color name="common_text_blue">#3680df</color> //辅色 蓝
+    <!--进度条色值-->
+    <color name="color_shop_progress_solid">#ff5000</color> //首页进度条完成部分
+    <color name="color_shop_progress_bg">#f4f4f4</color>  //首页进度条未完成部分
+    <color name="color_task_progress_bg">#e1e1e1</color>//每日任务玩法介绍进度条未完成部分
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_banner_view" />
+
+    <!-- icon-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview_icons"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:scrollbars="none" />
+
+    <include layout="@layout/include_line_view" />
+    <!--小喇叭-->
+    <LinearLayout
+        android:id="@+id/layout_message_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_padding">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_message_notice" />
+
+        <ViewFlipper
+            android:id="@+id/layout_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:flipInterval="5000"
+            android:inAnimation="@anim/share_activity_in"
+            android:outAnimation="@anim/share_activity_out" />
+    </LinearLayout>
+
+
+    <!-- 排序-->
+    <LinearLayout
+        android:id="@+id/layout_sort_head"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/common_bg_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/common_padding">
+
+        <TextView
+            android:id="@+id/tv_hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/checkgoods_hot"
+            android:textColor="@color/main_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_remain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/checkgoods_newest"
+            android:textColor="@color/theme_text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/checkgoods_rate"
+            android:textColor="@color/theme_text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_all_asc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/checkgoods_all"
+            android:textColor="@color/theme_text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_all_desc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="最奢侈"
+            android:textColor="@color/theme_text_black"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>

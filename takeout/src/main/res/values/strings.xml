@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">一元夺宝</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="APP_NAME">一元夺宝</string>
+    <string name="app_getin">立即体验</string>
+
+    <string name="checkgoods_hot">人气</string>
+    <string name="checkgoods_newest">最新</string>
+    <string name="checkgoods_rate">进度</string>
+    <string name="checkgoods_all">总需人次</string>
+    <!--进度条文字-->
+    <string name="progress_schedule">进度：</string>
+    <string name="progress_qishu">期号：</string>
+    <string name="progress_allnum">总需人次：</string>
+    <string name="progress_renum">剩余人次：</string>
+    <!--搜索-->
+    <string name="search_othertags">您是不是想找</string>
+    <string name="search_mytags">我的搜索记录</string>
+    <string name="search_num">搜索当前幸运码</string>
+    <string name="search_allbuy">全部加入购物车</string>
+    <!--最新揭晓-->
+    <string name="zxjx_username">中奖用户</string>
+    <string name="zxjx_awardnum">中奖号码</string>
+    <string name="zxjx_awardtime">中奖时间</string>
+    <string name="zxjx_joinnum">参与人次</string>
+    <!--登陆 注册-->
+    <string name="login">登陆</string>
+    <string name="regist">注册</string>
+    <string name="login_forgetpswd">忘记密码</string>
+    <string name="login_pswdhint">请输入密码(6-14位数字或字母)</string>
+    <string name="login_phonehint">请输入您的手机号码</string>
+    <string name="login_third">第三方登陆</string>
+    <string name="login_recode">获取验证码</string>
+    <string name="login_protocol">《用户使用协议》</string>
+    <string name="login_tip">我已阅读并同意</string>
+
+
+
+
+    <!--xRefresh-->
+    <string name="xrefreshview_header_hint_normal">下拉刷新</string>
+    <string name="xrefreshview_header_hint_ready">松开刷新数据</string>
+    <string name="xrefreshview_header_hint_refreshing">正在刷新...</string>
+    <string name="xrefreshview_header_hint_loading">正在加载...</string>
+    <string name="xrefreshview_header_hint_loaded">加载完成</string>
+    <string name="xrefreshview_header_last_time">上次更新时间：</string>
+    <string name="xrefreshview_footer_hint_normal">加载完成</string>
+    <string name="xrefreshview_footer_hint_fail">加载失败，请重试</string>
+    <string name="xrefreshview_footer_hint_complete">已无更多数据</string>
+    <string name="xrefreshview_footer_hint_click">点击加载更多</string>
+    <string name="xrefreshview_footer_hint_release">松开加载更多</string>
+    <string name="xrefreshview_footer_hint_ready">松开载入更多</string>
+    <string name="xrefreshview_never_refresh">从未刷新</string>
+    <string name="xrefreshview_refresh_justnow">刚刚刷新</string>
+    <string name="xrefreshview_refresh_minutes_ago">%1s分钟之前刷新</string>
+    <string name="xrefreshview_refresh_hours_ago">%1s小时之前刷新</string>
+    <string name="xrefreshview_refresh_days_ago">%1s天之前刷新</string>
+</resources>
