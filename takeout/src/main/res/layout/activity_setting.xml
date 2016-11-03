@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title">
+
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_notifaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@color/white"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_notifaction" />
+
+        <TextView
+            android:id="@+id/tv_notifaction_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/icon_arrow_right"
+            android:text="@string/setting_isopen" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_trouble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@color/white"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_troble" />
+
+        <ImageView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow_right" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_line_view" />
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_updata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_updata" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/app_version" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_line_view" />
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_about" />
+
+        <ImageView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@color/white"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_clear" />
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="8MB" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_setting_logout"
+        style="@style/Default_Textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@color/white"
+        android:text="@string/setting_logout" />
+
+</LinearLayout>

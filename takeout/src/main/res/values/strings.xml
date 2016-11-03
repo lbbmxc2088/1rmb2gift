@@ -4,6 +4,7 @@
 
     <string name="APP_NAME">一元夺宝</string>
     <string name="app_getin">立即体验</string>
+    <string name="app_version">1.0.0</string>
 
     <string name="checkgoods_hot">人气</string>
     <string name="checkgoods_newest">最新</string>
@@ -34,7 +35,28 @@
     <string name="login_recode">获取验证码</string>
     <string name="login_protocol">《用户使用协议》</string>
     <string name="login_tip">我已阅读并同意</string>
+    <!--我的-->
+    <string name="mine_ing">正在进行</string>
+    <string name="mine_end">已揭晓</string>
+    <string name="mine_mult">多期揭晓</string>
+    <string name="mine_allrecord">全部夺宝记录</string>
+    <string name="mine_luckyrecord">幸运记录</string>
+    <string name="mine_buyrecord">购买记录</string>
+    <string name="mine_redgrab">红包</string>
+    <string name="mine_sd">晒单</string>
+    <string name="mine_chargerecord">充值记录</string>
+    <string name="mine_service">客服</string>
 
+    <!--设置-->
+    <string name="setting_notifaction">揭晓通知设置</string>
+    <string name="setting_troble">常见问题</string>
+    <string name="setting_updata">检查更新</string>
+    <string name="setting_about">关于1元夺宝</string>
+    <string name="setting_clear">清除缓存</string>
+    <string name="setting_logout">退出登陆</string>
+    <string name="setting_isopen">已开启</string>
+    <!--购买记录-->
+    <string name="record_tobuy">去购买</string>
 
 
 

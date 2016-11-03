@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.muan.takeout.Model.UserInfoEntity;
 import com.muan.takeout.R;
 import com.muan.takeout.Utils.FinalTools;
 import com.muan.takeout.Utils.MessageUtils;
@@ -116,6 +117,13 @@ public class LoginActivity extends BaseActivity {
 
     //调用登陆接口
     public void Login() {
+        UserInfoEntity user = new UserInfoEntity();
+        user.nickname = "Demo1";
+        user.signature = "sign2";
+        user.id = 123;
+        user.token = "456";
+        user.saveInfo(this);
+        this.finish();
 
     }
 
@@ -130,7 +138,7 @@ public class LoginActivity extends BaseActivity {
         return R.layout.activity_login;
     }
 
-    @OnClick({R.id.bt_login_in, R.id.tv_login_findpswd, R.id.title_back, R.id.bt_regist, R.id.title_back, R.id.iv_wx_login, R.id.ll_login_wx, R.id.iv_qq_login, R.id.ll_login_qq})
+    @OnClick({R.id.bt_login_in, R.id.tv_login_findpswd, R.id.title_back, R.id.bt_regist, R.id.iv_wx_login, R.id.ll_login_wx, R.id.iv_qq_login, R.id.ll_login_qq})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_login_in:

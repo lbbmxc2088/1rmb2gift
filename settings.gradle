@@ -1,1 +1,1 @@
-include ':takeout', ':ImageLoader', ':zerogo', ':volley'
+include ':takeout', ':ImageLoader', ':volley'

@@ -46,6 +46,15 @@
         <activity android:name=".Activity.SearchActivity"></activity>
         <activity android:name=".Activity.LoginActivity"></activity>
         <activity android:name=".Activity.RegistActivity"></activity>
+        <activity android:name=".Activity.AllRecordActivity"></activity>
+        <activity android:name=".Activity.BuyRecordActivity"></activity>
+        <activity android:name=".Activity.RedgrabActivity"></activity>
+        <activity android:name=".Activity.ChargeRecordActivity"></activity>
+        <activity android:name=".Activity.LuckyRecodActivity"></activity>
+        <activity android:name=".Activity.MultiActivity"></activity>
+        <activity android:name=".Activity.SDActivity"></activity>
+        <activity android:name=".Activity.SettingActivity"></activity>
+        <activity android:name=".Activity.UserInfoActivity"></activity>
     </application>
 
 </manifest>
