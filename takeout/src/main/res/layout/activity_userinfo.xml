@@ -1,6 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_userinfo_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo_head" />
+
+        <ImageView
+            android:id="@+id/iv_userinfo_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_userinfo_arrow"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_userinfo_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow_right" />
+
+        <include layout="@layout/include_line_view" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userinfo_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo_id" />
+
+        <TextView
+            android:id="@+id/tv_userinfo_id"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <include layout="@layout/include_line_view" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userinfo_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo_account" />
+
+        <TextView
+            android:id="@+id/tv_userinfo_account"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <include layout="@layout/include_line_view" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userinfo_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo_nikename" />
+
+        <TextView
+            android:id="@+id/tv_userinfo_nickname"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_userinfo_arrow3" />
+
+        <ImageView
+            android:id="@+id/iv_userinfo_arrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow_right" />
+
+        <include layout="@layout/include_line_view" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userinfo_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo_phone" />
+
+        <TextView
+            android:id="@+id/tv_userinfo_phone"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_userinfo_arrow2" />
+
+        <ImageView
+            android:id="@+id/iv_userinfo_arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow_right" />
+
+        <include layout="@layout/include_line_view" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userinfo_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo_address" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow_right" />
+
+        <include layout="@layout/include_line_view" />
+    </RelativeLayout>
 </LinearLayout>

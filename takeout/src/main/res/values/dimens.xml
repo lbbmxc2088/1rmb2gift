@@ -4,11 +4,20 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-
+    //标题
     <dimen name="title_height">40dp</dimen>
+    <dimen name="title_m">15sp</dimen>
     <dimen name="title_textsize">19sp</dimen>
-    <dimen name="common_margin">12dp</dimen> //页面左右边距
-    <dimen name="common_padding">10dp</dimen> //内容与控件边缘距离
-    <dimen name="main_text">14sp</dimen>  //大段描述文字、商品标题文字
-    <dimen name="line_size">1px</dimen> //分割线
+    //页面左右边距
+    <dimen name="common_margin">12dp</dimen>
+    //内容与控件边缘距离
+    <dimen name="common_padding">10dp</dimen>
+    //大段描述文字、商品标题文字
+    <dimen name="main_text">14sp</dimen>
+    //分割线
+    <dimen name="line_size">1px</dimen>
+    //默认圆角
+    <dimen name="common_corner">5dp</dimen>
+    //20的字体
+    <dimen name="textsize_20">20sp</dimen>
 </resources>

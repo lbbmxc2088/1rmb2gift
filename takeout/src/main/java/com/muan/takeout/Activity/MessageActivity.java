@@ -5,12 +5,19 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.VolleyError;
 import com.muan.takeout.Adapter.MessageAdapter;
 import com.muan.takeout.Model.MessageEntity;
 import com.muan.takeout.R;
+import com.muan.takeout.Utils.IpConfig;
 import com.muan.takeout.Utils.MessageUtils;
+import com.muan.takeout.Utils.volley.MyJsonRequestListener;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -76,5 +83,18 @@ public class MessageActivity extends BaseActivity {
         super.onItemClick(parent, view, position, id);
         MessageUtils.alertLongMessageCENTER("进入消息详情" + position);
     }
+    private void getData() {
+        HashMap map = new HashMap();
+        new MyJsonRequestListener(this, Request.Method.GET, IpConfig.HTTP, map) {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+            }
 
+            @Override
+            public void onResponse(JSONObject response) {
+                super.onResponse(response);
+            }
+        };
+    }
 }

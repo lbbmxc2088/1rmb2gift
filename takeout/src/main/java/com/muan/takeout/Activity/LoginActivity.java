@@ -8,11 +8,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.VolleyError;
 import com.muan.takeout.Model.UserInfoEntity;
 import com.muan.takeout.R;
 import com.muan.takeout.Utils.FinalTools;
+import com.muan.takeout.Utils.IpConfig;
 import com.muan.takeout.Utils.MessageUtils;
 import com.muan.takeout.Utils.WXUtils;
+import com.muan.takeout.Utils.volley.MyJsonRequestListener;
 import com.tencent.connect.UserInfo;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
@@ -20,6 +24,8 @@ import com.tencent.tauth.UiError;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -190,5 +196,19 @@ public class LoginActivity extends BaseActivity {
         mIv_wx.setEnabled(enable);
         mLl_qq.setEnabled(enable);
         mLl_wx.setEnabled(enable);
+    }
+    private void getData() {
+        HashMap map = new HashMap();
+        new MyJsonRequestListener(this, Request.Method.GET, IpConfig.HTTP, map) {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+            }
+
+            @Override
+            public void onResponse(JSONObject response) {
+                super.onResponse(response);
+            }
+        };
     }
 }

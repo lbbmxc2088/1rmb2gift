@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_history_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding">
+
+        <ImageView
+            android:id="@+id/iv_history_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+
+            android:src="@mipmap/icon_app" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_history_pic"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_history_pic"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_history_name"
+                style="@style/Default_Textview"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="iphone7" />
+
+            <TextView
+                android:id="@+id/tv_history_qihao"
+                style="@style/Default_Textview"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="参与期号:123" />
+
+            <TextView
+                android:id="@+id/tv_history_times"
+                style="@style/Default_Textview"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="参与人次:123" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/include_line_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_history_winner"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_winner" />
+
+        <TextView
+            android:id="@+id/tv_history_winnername"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_padding"
+            android:layout_toRightOf="@+id/tv_history_winner"
+            android:text="中奖了" />
+
+        <TextView
+            android:id="@+id/tv_history_wintimes"
+            style="@style/Default_Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_padding"
+            android:layout_toRightOf="@+id/tv_history_winnername"
+            android:text="10人次" />
+
+        <TextView
+            android:id="@+id/tv_history_buyagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_r4_white_1red"
+            android:padding="3dp"
+            android:text="@string/record_buyagain"
+            android:textColor="@color/main_red" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

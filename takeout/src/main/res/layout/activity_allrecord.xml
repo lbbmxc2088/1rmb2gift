@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:background="@color/common_bg_gray"
     android:orientation="vertical">
-    <include layout="@layout/include_title"/>
+
+    <include layout="@layout/include_title" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,6 +17,7 @@
 
         <TextView
             android:id="@+id/tv_record_all"
+            style="@style/Default_Textview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -23,13 +25,12 @@
 
         <TextView
             android:id="@+id/tv_myhistory_ing"
+            style="@style/Default_Textview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/mine_ing"
-            android:textColor="@color/main_red"
-            android:textSize="16sp" />
+            android:text="@string/mine_ing" />
 
         <TextView
             android:id="@+id/tv_myhitory_end"
@@ -37,9 +38,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/mine_end"
-            android:textColor="@color/theme_text_black"
-            android:textSize="16sp" />
+            android:text="@string/mine_end" />
     </LinearLayout>
 
     <FrameLayout
@@ -80,34 +79,12 @@
         </com.muan.takeout.Widget.xRefresh.XRefreshView>
 
         <LinearLayout
-            android:id="@+id/ll_myhistory_nodata"
+            android:id="@+id/ll_allrecord_nodata"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
-            android:weightSum="5">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="3"
-             />
-
-            <Button
-                android:id="@+id/bt_myhistory_gobuy"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/main_red"
-                android:gravity="center"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp"
-                android:text="@string/record_tobuy"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-        </LinearLayout>
+            android:visibility="gone"></LinearLayout>
     </FrameLayout>
 
 </LinearLayout>

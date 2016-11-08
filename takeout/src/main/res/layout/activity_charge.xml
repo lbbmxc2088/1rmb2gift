@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="@string/charge_chargemoney"
+                        android:textColor="@color/theme_text_black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/common_devideline_dd" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_charge_10"
+                            style="@style/Charge_Choose_Item_Style"
+                            android:text="@string/charge_10" />
+
+                        <TextView
+                            android:id="@+id/tv_charge_20"
+                            style="@style/Charge_Choose_Item_Style"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/charge_20" />
+
+                        <TextView
+                            android:id="@+id/tv_charge_30"
+                            style="@style/Charge_Choose_Item_Style"
+                            android:text="@string/charge_30" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_charge_50"
+                            style="@style/Charge_Choose_Item_Style"
+                            android:text="@string/charge_50" />
+
+                        <TextView
+                            android:id="@+id/tv_charge_100"
+                            style="@style/Charge_Choose_Item_Style"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/charge_100" />
+
+                        <EditText
+                            android:id="@+id/et_charge_num"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_charge_edit"
+                            android:cursorVisible="false"
+                            android:digits="@string/app_digits_num"
+                            android:gravity="center"
+                            android:hint="@string/charge_hint"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:maxLines="1"
+                            android:textColor="@drawable/selector_charge_edit_item_color"
+                            android:textColorHint="@color/theme_text_gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="@string/charge_chargeway"
+                        android:textColor="@color/theme_text_black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/common_devideline_dd" />
+
+                    <com.muan.takeout.Widget.ListViewForScrollView
+                        android:id="@+id/lv_charge_channel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/trans"
+                        android:dividerHeight="0px" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_charge_submit"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/common_margin"
+            android:layout_weight="0"
+            android:background="@drawable/shape_red_radius"
+            android:gravity="center"
+            android:text="@string/charge_surecz"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

@@ -10,23 +10,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        style="@style/Default_Textview"
-        android:drawableLeft="@mipmap/icon_back" />
+        android:drawableLeft="@mipmap/icon_back"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_m" />
 
     <TextView
         android:id="@+id/title_middle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        style="@style/Default_Textview"
+        android:textColor="@color/white"
         android:textSize="@dimen/title_textsize" />
 
     <TextView
         android:id="@+id/title_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Default_Textview"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_m" />
 
 </RelativeLayout>

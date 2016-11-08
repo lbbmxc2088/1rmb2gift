@@ -25,19 +25,19 @@ public class SearchResultAdapter extends BasisAdapter<GoodsEntity> {
     @Override
     public void bingHolder(BasisViewHolder basisViewHolder, int position) {
         ViewHolder viewHolder = (ViewHolder) basisViewHolder;
-        viewHolder.mTvName.setText(mList.get(position).getTitle());
+        viewHolder.mTvName.setText(mList.get(position).getGoods_name());
         int mTotal = 100;
         int mRemain = 50;
         try {
-            mTotal = mList.get(position).getTotal();
-            mRemain = mList.get(position).getRemain();
+            mTotal = Integer.parseInt(mList.get(position).getCopies());
+            mRemain = Integer.parseInt(mList.get(position).getSell_copies());
         } catch (Exception e) {
 
         }
         viewHolder.mTvPrize.setText(mTotal + "");
         viewHolder.mProgressShopStatus.setMax(mTotal);
-        viewHolder.mProgressShopStatus.setProgress(mTotal - mRemain);
-        viewHolder.mTvStatus.setText((int) ((mTotal - mRemain + 0f) / mTotal * 100) + "%");
+        viewHolder.mProgressShopStatus.setProgress(mRemain);
+        viewHolder.mTvStatus.setText((int) ((mRemain + 0f) / mTotal * 100) + "%");
     }
 
     @Override
@@ -50,19 +50,19 @@ public class SearchResultAdapter extends BasisAdapter<GoodsEntity> {
         @BindView(R.id.iv_goods)
         public ImageView mIvGoods;
 
-        @BindView( R.id.tv_add_shopcart)
+        @BindView(R.id.tv_add_shopcart)
         public ImageView mIvAddShopCart;
 
-        @BindView( R.id.tv_status)
+        @BindView(R.id.tv_status)
         public TextView mTvStatus;
 
-        @BindView( R.id.tv_prize)
+        @BindView(R.id.tv_prize)
         public TextView mTvPrize;
 
-        @BindView( R.id.tv_name)
+        @BindView(R.id.tv_name)
         public TextView mTvName;
 
-        @BindView( R.id.progress_shop_statis)
+        @BindView(R.id.progress_shop_statis)
         public ProgressBar mProgressShopStatus;
 
         public ViewHolder(View view) {

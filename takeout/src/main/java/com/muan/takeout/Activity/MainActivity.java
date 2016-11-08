@@ -6,6 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.android.volley.Request;
+import com.android.volley.VolleyError;
 import com.muan.takeout.Adapter.HomeMenuPagerAdapter;
 import com.muan.takeout.Fragment.BaseFragment;
 import com.muan.takeout.Fragment.CarFragment;
@@ -14,9 +16,15 @@ import com.muan.takeout.Fragment.MainFragment;
 import com.muan.takeout.Fragment.MineFragment;
 import com.muan.takeout.Fragment.NewsFragment;
 import com.muan.takeout.R;
+import com.muan.takeout.Utils.FinalTools;
+import com.muan.takeout.Utils.IpConfig;
 import com.muan.takeout.Utils.MessageUtils;
+import com.muan.takeout.Utils.volley.MyJsonRequestListener;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -108,6 +116,14 @@ public class MainActivity extends BaseFragmentActivity implements ViewPager.OnPa
         mRgHomeMenu.setOnCheckedChangeListener(this);
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (FinalTools.TO_SHOPPING.equals(intent.getStringExtra("type"))) {
+            mContentViewpager.setCurrentItem(0);
+        }
+
+    }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -159,6 +175,20 @@ public class MainActivity extends BaseFragmentActivity implements ViewPager.OnPa
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+    private void getData() {
+        HashMap map = new HashMap();
+        new MyJsonRequestListener(this, Request.Method.GET, IpConfig.HTTP, map) {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+            }
+
+            @Override
+            public void onResponse(JSONObject response) {
+                super.onResponse(response);
+            }
+        };
     }
 
 }

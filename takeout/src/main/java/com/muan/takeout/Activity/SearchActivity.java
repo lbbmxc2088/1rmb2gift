@@ -12,14 +12,21 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.VolleyError;
 import com.muan.takeout.Adapter.SearchResultAdapter;
 import com.muan.takeout.Model.GoodsEntity;
 import com.muan.takeout.R;
+import com.muan.takeout.Utils.IpConfig;
 import com.muan.takeout.Utils.MessageUtils;
 import com.muan.takeout.Utils.PreferenceUtils;
+import com.muan.takeout.Utils.volley.MyJsonRequestListener;
 import com.muan.takeout.Widget.tagview.FlowLayout;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -244,14 +251,28 @@ public class SearchActivity extends BaseActivity {
         //商品数据
         for (int i = 0; i < 20; i++) {
             GoodsEntity good = new GoodsEntity();
-            good.setImg("http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=ipone7%E5%9B%BE%E7%89%87&step_word=&hs=0&pn=0&spn=0&di=35616351210&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=3256437698%2C2740429284&os=2904359539%2C2437687918&simid=3449594756%2C359644484&adpicid=0&ln=1850&fr=&fmq=1477968599095_R&fm=result&ic=0&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fi2.qihuiwang.com%2Fweb%2F2015-02-28%2F0149075f13ca32b6b4.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fgjof_z%26e3Bqti7towg2_z%26e3Bv54AzdH3FEq7tr4jgpAzdH3Fda8caddblmccl_z%26e3Bip4s&gsm=0&rpstart=0&rpnum=0");
-            good.setTotal(7000);
-            good.setRemain(i * 30);
-            good.setTitle("iphone7测试" + i);
+            good.setGoods_thumb("http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=ipone7%E5%9B%BE%E7%89%87&step_word=&hs=0&pn=0&spn=0&di=35616351210&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=3256437698%2C2740429284&os=2904359539%2C2437687918&simid=3449594756%2C359644484&adpicid=0&ln=1850&fr=&fmq=1477968599095_R&fm=result&ic=0&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fi2.qihuiwang.com%2Fweb%2F2015-02-28%2F0149075f13ca32b6b4.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fgjof_z%26e3Bqti7towg2_z%26e3Bv54AzdH3FEq7tr4jgpAzdH3Fda8caddblmccl_z%26e3Bip4s&gsm=0&rpstart=0&rpnum=0");
+            good.setCopies(7000+"");
+            good.setSell_copies(i * 30+"");
+            good.setGoods_name("iphone7测试" + i);
             mList_search.add(good);
         }
         mAdapter.notifyDataSetChanged();
 
 
+    }
+    private void getData() {
+        HashMap map = new HashMap();
+        new MyJsonRequestListener(this, Request.Method.GET, IpConfig.HTTP, map) {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+            }
+
+            @Override
+            public void onResponse(JSONObject response) {
+                super.onResponse(response);
+            }
+        };
     }
 }

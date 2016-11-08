@@ -43,9 +43,18 @@
     <string name="mine_luckyrecord">幸运记录</string>
     <string name="mine_buyrecord">购买记录</string>
     <string name="mine_redgrab">红包</string>
+    <string name="mine_redgrab_can">可使用</string>
+    <string name="mine_redgrab_cant">已过期/已使用</string>
+    <string name="mine_redgrab_exchange">红包兑换</string>
+    <string name="mine_redgrab_starttime">生效时间</string>
+    <string name="mine_redgrab_endtime">失效时间</string>
+    <string name="mine_redgrab_money">金额</string>
     <string name="mine_sd">晒单</string>
     <string name="mine_chargerecord">充值记录</string>
     <string name="mine_service">客服</string>
+    <!--信息修改-->
+    <string name="updata_exchangeredgrab">兑换红包</string>
+    <string name="updata_hint">请输入内容</string>
 
     <!--设置-->
     <string name="setting_notifaction">揭晓通知设置</string>
@@ -57,8 +66,43 @@
     <string name="setting_isopen">已开启</string>
     <!--购买记录-->
     <string name="record_tobuy">去购买</string>
-
-
+    <string name="record_winner">购买者</string>
+    <string name="record_buyagain">再次购买</string>
+    <string name="record_recommon">猜你喜欢</string>
+    <string name="record_all">全部</string>
+    <string name="record_dfk">待付款</string>
+    <string name="record_dfh">待发货</string>
+    <string name="record_dcs">待收货</string>
+    <!--个人信息-->
+    <string name="userinfo_head">头像</string>
+    <string name="userinfo_id">ID</string>
+    <string name="userinfo_account">账号</string>
+    <string name="userinfo_nikename">昵称</string>
+    <string name="userinfo_phone">手机号码</string>
+    <string name="userinfo_address">地址管理</string>
+    <!--地址管理-->
+    <string name="address_name">收货人</string>
+    <string name="address_name_hint">请输入收货人姓名</string>
+    <string name="address_phone">手机号码</string>
+    <string name="address_phone_hint">请输入手机号码</string>
+    <string name="address_detail">详细地址</string>
+    <string name="address_detail_hint">请输入详细地址</string>
+    <string name="address_save">保存</string>
+    <!--充值-->
+    <string name="charge_nodata">充值列表为空</string>
+    <string name="charge_cz">充值</string>
+    <string name="charge_surecz">确认充值</string>
+    <string name="charge_chargeway">充值渠道</string>
+    <string name="charge_chargemoney">充值金额</string>
+    <string name="charge_10">10</string>
+    <string name="charge_20">20</string>
+    <string name="charge_30">30</string>
+    <string name="charge_50">50</string>
+    <string name="charge_100">100</string>
+    <string name="charge_hint">请输入充值金额</string>
+    <!-- 过滤数据-->
+    <string name="app_digits">.@0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_</string>
+    <string name="app_digits_num">0123456789</string>
 
     <!--xRefresh-->
     <string name="xrefreshview_header_hint_normal">下拉刷新</string>

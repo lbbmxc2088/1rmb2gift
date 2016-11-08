@@ -14,6 +14,7 @@ import com.android.volley.VolleyError;
 import com.muan.takeout.Model.MessageEntity;
 import com.muan.takeout.R;
 import com.muan.takeout.Utils.FinalTools;
+import com.muan.takeout.Utils.IpConfig;
 import com.muan.takeout.Utils.MessageUtils;
 import com.muan.takeout.Utils.PatternTools;
 import com.muan.takeout.Utils.StringUtil;
@@ -201,5 +202,18 @@ public class RegistActivity extends BaseActivity {
     public void getYanzhengma() {
         startTimer();
     }
+    private void getData() {
+        HashMap map = new HashMap();
+        new MyJsonRequestListener(this, Request.Method.GET, IpConfig.HTTP, map) {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+            }
 
+            @Override
+            public void onResponse(JSONObject response) {
+                super.onResponse(response);
+            }
+        };
+    }
 }

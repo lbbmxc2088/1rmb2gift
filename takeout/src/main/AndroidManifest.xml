@@ -27,7 +27,6 @@
         android:allowBackup="true"
         android:icon="@mipmap/icon_app"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".Activity.WelcomeActivity"
@@ -41,20 +40,23 @@
         <activity
             android:name=".Activity.SplashActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
-        <activity android:name=".Activity.MainActivity"></activity>
-        <activity android:name=".Activity.MessageActivity"></activity>
-        <activity android:name=".Activity.SearchActivity"></activity>
-        <activity android:name=".Activity.LoginActivity"></activity>
-        <activity android:name=".Activity.RegistActivity"></activity>
-        <activity android:name=".Activity.AllRecordActivity"></activity>
-        <activity android:name=".Activity.BuyRecordActivity"></activity>
-        <activity android:name=".Activity.RedgrabActivity"></activity>
-        <activity android:name=".Activity.ChargeRecordActivity"></activity>
-        <activity android:name=".Activity.LuckyRecodActivity"></activity>
-        <activity android:name=".Activity.MultiActivity"></activity>
-        <activity android:name=".Activity.SDActivity"></activity>
-        <activity android:name=".Activity.SettingActivity"></activity>
-        <activity android:name=".Activity.UserInfoActivity"></activity>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.MessageActivity" />
+        <activity android:name=".Activity.SearchActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.RegistActivity" />
+        <activity android:name=".Activity.AllRecordActivity" />
+        <activity android:name=".Activity.BuyRecordActivity" />
+        <activity android:name=".Activity.RedgrabActivity" />
+        <activity android:name=".Activity.ChargeRecordActivity" />
+        <activity android:name=".Activity.ChargeActivity" />
+        <activity android:name=".Activity.LuckyRecodActivity" />
+        <activity android:name=".Activity.MultiActivity" />
+        <activity android:name=".Activity.SDActivity" />
+        <activity android:name=".Activity.SettingActivity" />
+        <activity android:name=".Activity.UserInfoActivity" />
+        <activity android:name=".Activity.AddressActivity" />
+        <activity android:name=".Activity.AddressUpdataActivity" />
     </application>
 
 </manifest>

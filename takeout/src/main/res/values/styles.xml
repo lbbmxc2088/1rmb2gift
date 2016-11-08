@@ -35,9 +35,20 @@
         <item name="android:drawablePadding">4dp</item>
         <item name="android:background">@color/trans</item>
     </style>
+
+    <style name="Charge_Choose_Item_Style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/selector_color_charge_item</item>
+        <item name="android:background">@drawable/selector_charge_btn</item>
+    </style>
     <!--默认TextView样式-->
     <style name="Default_Textview">
-        <item name="android:textColor">@color/theme_text_black</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/main_text</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>

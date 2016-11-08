@@ -22,7 +22,9 @@ import com.muan.takeout.Activity.RegistActivity;
 import com.muan.takeout.Activity.SDActivity;
 import com.muan.takeout.Activity.SettingActivity;
 import com.muan.takeout.Activity.UserInfoActivity;
+import com.muan.takeout.Model.UserInfoEntity;
 import com.muan.takeout.R;
+import com.muan.takeout.Utils.CommonUtils;
 import com.muan.takeout.Utils.FinalTools;
 import com.muan.takeout.Utils.IntentUtils;
 import com.muan.takeout.Utils.MessageUtils;
@@ -81,10 +83,13 @@ public class MineFragment extends BaseFragment {
     @BindView(R.id.xrfv_mine)
     XRefreshView xrfvMine;
 
+    UserInfoEntity mUserinfo;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View mFragmentView = inflater.inflate(R.layout.fragment_mine, container, false);
         ButterKnife.bind(this, mFragmentView);
+        initView();
         return mFragmentView;
     }
 
@@ -175,4 +180,43 @@ public class MineFragment extends BaseFragment {
                 break;
         }
     }
+
+    public void initView() {
+        mUserinfo = mApplication.getUserInfo();
+        if (mUserinfo == null) {
+            isLogin(false);
+        }
+    }
+
+    //是否登陆界面
+    public void isLogin(boolean islogin) {
+        if (islogin) {
+            mLl_MineLogin.setVisibility(View.VISIBLE);
+            mRl_MineRegist.setVisibility(View.GONE);
+            mTv_MineName.setText(mUserinfo.nickname);
+            mTv_MineSign.setText(mUserinfo.signature);
+            //  mCriv_MineHead.setImageResource();
+
+        } else {
+            mLl_MineLogin.setVisibility(View.GONE);
+            mRl_MineRegist.setVisibility(View.VISIBLE);
+            mCriv_MineHead.setImageDrawable(CommonUtils.getDrawable(mActivity, R.mipmap.icon_app));
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getUserInfo();
+    }
+
+    private void getUserInfo() {
+        if (mApplication.getUserInfo() == null) {
+            isLogin(false);
+            return;
+        }
+        //获得用户最新信息
+        isLogin(true);
+    }
+
 }

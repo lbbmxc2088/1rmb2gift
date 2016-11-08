@@ -4,88 +4,99 @@ package com.muan.takeout.Model;
  * Created by ${Muan} on 2016/6/7.
  */
 public class GoodsEntity {
-    //id
-    private long id;
-    private long gid;
-    //标题
-    private String title;
-    //第几期
-    private String issue;
-    //总需
-    private int total;
-    //剩余
-    private int remain;
-    //图片
-    private String img;
-    //期数
-    private int multi;
 
 
+    /**
+     * goods_id : 1
+     * goods_sn : 001
+     * goods_name : Apple iPhone6s Plus 128G 颜色随机
+     * shop_price : 10.00
+     * yunjiage : 1
+     * goods_thumb : iphoneplust_1.jpg
+     * copies : 658
+     * sell_copies : 658
+     * page_count : 8
+     */
 
+    private String goods_id;
+    private String goods_sn;
+    private String goods_name;
+    private String shop_price;
+    private String yunjiage;
+    private String goods_thumb;
+    private String copies;
+    private String sell_copies;
+    private String page_count;
 
-    public long getId() {
-        return id;
+    public void setGoods_id(String goods_id) {
+        this.goods_id = goods_id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setGoods_sn(String goods_sn) {
+        this.goods_sn = goods_sn;
     }
 
-    public long getGid() {
-        return gid;
+    public void setGoods_name(String goods_name) {
+        this.goods_name = goods_name;
     }
 
-    public void setGid(long gid) {
-        this.gid = gid;
+    public void setShop_price(String shop_price) {
+        this.shop_price = shop_price;
     }
 
-    public String getTitle() {
-        return title;
+    public void setYunjiage(String yunjiage) {
+        this.yunjiage = yunjiage;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setGoods_thumb(String goods_thumb) {
+        this.goods_thumb = goods_thumb;
     }
 
-    public String getIssue() {
-        return issue;
+    public void setCopies(String copies) {
+        this.copies = copies;
     }
 
-    public void setIssue(String issue) {
-        this.issue = issue;
+    public void setSell_copies(String sell_copies) {
+        this.sell_copies = sell_copies;
     }
 
-    public int getTotal() {
-        return total;
+    public void setPage_count(String page_count) {
+        this.page_count = page_count;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public String getGoods_id() {
+        return goods_id;
     }
 
-    public int getRemain() {
-        return remain;
+    public String getGoods_sn() {
+        return goods_sn;
     }
 
-    public void setRemain(int remain) {
-        this.remain = remain;
+    public String getGoods_name() {
+        return goods_name;
     }
 
-    public String getImg() {
-        return img;
+    public String getShop_price() {
+        return shop_price;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public String getYunjiage() {
+        return yunjiage;
     }
 
-    public int getMulti() {
-        return multi;
+    public String getGoods_thumb() {
+        return goods_thumb;
     }
 
-    public void setMulti(int multi) {
-        this.multi = multi;
+    public String getCopies() {
+        return copies;
     }
 
+    public String getSell_copies() {
+        return sell_copies;
+    }
 
+    public String getPage_count() {
+        return page_count;
+    }
 }

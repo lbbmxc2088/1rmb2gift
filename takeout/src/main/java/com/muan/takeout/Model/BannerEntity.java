@@ -1,88 +1,56 @@
 package com.muan.takeout.Model;
 
+import java.util.List;
+
 /**
  * Created by ${Muan} on 2016/6/7.
  */
 public class BannerEntity {
-    public long getGid() {
-        return gid;
-    }
-
-    public void setGid(long gid) {
-        this.gid = gid;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getShare_icon() {
-        return share_icon;
-    }
-
-    public void setShare_icon(String share_icon) {
-        this.share_icon = share_icon;
-    }
-
-    public String getShare_title() {
-        return share_title;
-    }
-
-    public void setShare_title(String share_title) {
-        this.share_title = share_title;
-    }
-
-    public String getShare_content() {
-        return share_content;
-    }
-
-    public void setShare_content(String share_content) {
-        this.share_content = share_content;
-    }
-
-    public String getShare_url() {
-        return share_url;
-    }
-
-    public void setShare_url(String share_url) {
-        this.share_url = share_url;
-    }
 
     /**
-     * "gid": 1,
-     * "img": "http://zerogo-img.b0.upaiyun.com/2015/06/2015063015025928971img.jpg",
-     * "url": "@1",
-     * "title": "小米移动电源"
+     * Lbt : [{"ad_id":"1","ad_name":"轮播图1","ad_code":"lbt1.jpg","ad_link":"www.1.163.com"},{"ad_id":"2","ad_name":"轮播图2","ad_code":"lbt2.jpg","ad_link":"www.baidu.com"}]
+     */
+    /**
+     * ad_id : 1
+     * ad_name : 轮播图1
+     * ad_code : lbt1.jpg
+     * ad_link : www.1.163.com
      */
 
+    private String ad_id;
+    private String ad_name;
+    private String ad_code;
+    private String ad_link;
 
-    private long gid;
-    private String img;
-    private String url;
-    private String title;
+    public void setAd_id(String ad_id) {
+        this.ad_id = ad_id;
+    }
 
-    private String share_icon;
-    private String share_title;
-    private String share_content;
-    private String share_url;
+    public void setAd_name(String ad_name) {
+        this.ad_name = ad_name;
+    }
+
+    public void setAd_code(String ad_code) {
+        this.ad_code = ad_code;
+    }
+
+    public void setAd_link(String ad_link) {
+        this.ad_link = ad_link;
+    }
+
+    public String getAd_id() {
+        return ad_id;
+    }
+
+    public String getAd_name() {
+        return ad_name;
+    }
+
+    public String getAd_code() {
+        return ad_code;
+    }
+
+    public String getAd_link() {
+        return ad_link;
+    }
 }

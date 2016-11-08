@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_recom_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/icon_app" />
+
+    <Button
+        android:id="@+id/bt_recom_tobuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_recom_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@color/main_red"
+        android:text="@string/record_tobuy"
+        android:textColor="@color/white" />
+
+    <TextView
+        style="@style/Default_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rcv_recom"
+        android:text="@string/record_recommon" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_recom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
